@@ -11,7 +11,7 @@ while True:
     messages.append({"role": "user", "content": user_input})
     while True:
         print("------------[Agent] loop start-----------")
-        response = client.chat.completions.create(model="gpt-4o",messages=messages,)
+        response = client.chat.completions.create(model="gpt-5.4",messages=messages,)
         messages.append({"role": "assistant", "content": response.choices[0].message.content})     
         if response.choices[0].message.content.startswith("complete: "):
             print("------------[Agent] loop end-----------")

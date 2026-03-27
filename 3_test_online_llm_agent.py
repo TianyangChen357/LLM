@@ -18,7 +18,7 @@ while True:
     while True:
         print("------------[Agent] loop start-----------")
         response = client.chat.completions.create(
-            model="gpt-4o",  # OpenAI's GPT-4o model
+        model="gpt-5.4",  
             messages=messages,
         )
         messages.append({"role": "assistant", "content": response.choices[0].message.content})

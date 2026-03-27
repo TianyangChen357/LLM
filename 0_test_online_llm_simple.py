@@ -5,14 +5,11 @@ import os
 # Load environment variables from .env file
 load_dotenv()
 
-
-
-# Use OpenAI API directly
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 user_input=input("Enter your message: ")
 response = client.chat.completions.create(
-    model="gpt-4o",  # OpenAI's GPT-4o model
+    model="gpt-5.4",  
     messages=[
         {"role": "user", "content": user_input}
     ],

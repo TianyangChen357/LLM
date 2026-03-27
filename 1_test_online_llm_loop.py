@@ -12,7 +12,7 @@ while True:
 
     user_input=input("Enter your message: ")
     response = client.chat.completions.create(
-        model="gpt-4o",  # OpenAI's GPT-4o model
+        model="gpt-5.4",  
         messages=[
             {"role": "user", "content": user_input}
         ],
