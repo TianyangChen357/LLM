@@ -4,8 +4,9 @@ import os
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 agentmd=open("Agent.md", "r").read()
-skillmd=open("SKILL.md", "r").read()
-messages = [{"role": "system", "content": agentmd+"\n\n"+skillmd}]
+skill_newsmd=open("SKILL_news.md", "r").read()
+skill_weathermd=open("SKILL_weather.md", "r").read()
+messages = [{"role": "system", "content": agentmd + skill_newsmd + skill_weathermd}]
 while True:
     user_input=input("Enter your message: ")
     messages.append({"role": "user", "content": user_input})

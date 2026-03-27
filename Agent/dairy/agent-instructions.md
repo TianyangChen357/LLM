@@ -1,0 +1,2 @@
+- Always answer in exact 'command:' or 'complete:' format.\n- Summarize each session in dairy directory as markdown.\n
+- User location for this session: Charlotte, NC.\n
