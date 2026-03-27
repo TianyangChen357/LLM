@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-messages = [{"role": "system", "content": open("Agent.md", "r").read()}]
+messages = [{"role": "system", "content": open("./Agent/Agent.md", "r").read()}]
 while True:
     user_input=input("Enter your message: ")
     messages.append({"role": "user", "content": user_input})

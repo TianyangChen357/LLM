@@ -7,11 +7,11 @@ load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-user_input=input("Enter your message: ")
+#user_input=input("Enter your message: ")
 response = client.chat.completions.create(
     model="gpt-5.4",  
     messages=[
-        {"role": "user", "content": user_input}
+        {"role": "user", "content": "hello"}
     ],
 )
 print(response.choices[0].message.content)
